@@ -39,7 +39,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 public class WebAppConfig extends WebMvcConfigurerAdapter{
 	
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "db.driver";
-    private static final String PROPERTY_NAME_DATABASE_PASSWORD = "db.password";
+    private static final String PROPERTY_NAME_DATABASE_CLA = "db.password";
     private static final String PROPERTY_NAME_DATABASE_URL = "db.url";
     private static final String PROPERTY_NAME_DATABASE_USERNAME = "db.username";
 	
@@ -57,7 +57,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
 		dataSource.setDriverClassName(env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER));
 		dataSource.setUrl(env.getRequiredProperty(PROPERTY_NAME_DATABASE_URL));
 		dataSource.setUsername(env.getRequiredProperty(PROPERTY_NAME_DATABASE_USERNAME));
-		dataSource.setPassword(env.getRequiredProperty(PROPERTY_NAME_DATABASE_PASSWORD));
+		dataSource.setPassword(env.getRequiredProperty(PROPERTY_NAME_DATABASE_CLA));
 		
 		return dataSource;
 	}
